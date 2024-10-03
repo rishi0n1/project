@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+    background: linear-gradient(to right, #99ccff, #99ccff 50%, #ffffff 50%);
+    max-width: 100%;
+
+    width: 100%;
+    margin: 0;
+}
+
+.side-wrap {
+    width: 48%;
+    margin-top: 12vw;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    border-bottom: 0.1vw solid #99ccff;
+    display: block;
+    text-align: center;
+}
+
+.side-wrap .heading h1 {
+    margin: 0;
+    color: #99ccff;
+    text-transform: uppercase;
+    font-size: 5vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.side-wrap .caption p {
+    color: #99ccff;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.first-wrap {
+    width: 48%;
+}
+
+.first-wrap p {
+    font-size: 2vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    margin: 0 3vw 3vw 3vw;
+}
+
+.second-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.second-wrap .pic {
+    width: 49%;
+}
+
+img {
+    width: 100%;
+}
+
+.second-wrap .para {
+    width: 49%;
+}
+
+.heading1 {
+    color: #99ccff;
+    text-transform: uppercase;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin-left: 3vw;
+    font-size: 2vw;
+}
+
+.second-wrap .para p {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: 0vw 3vw 1vw 3vw;
+    font-size: 2vw;
+}
+
+.second-wrap .para p a {
+    text-decoration: none;
+    color: #99ccff;
+}
+
+.third-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 69vh;
+}
+
+.heading2 {
+    width: 49%;
+    background: #ffffff80;
+}
+
+.pic2 {
+    width: 49%;
+}
+
+.heading2 h2 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    color: #3698cc;
+    margin-left: 6vw;
+    margin-top: 4vw;
+    font-size: 3vw;
+}
+
+h2 {
+    margin: 0;
+}
+
+.third-wrap .heading2 p {
+    font-size: 2vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    line-height: 4vw;
+    margin-bottom: 4vw;
+}
+
+.fourth-wrap .heading3 h2 {
+    width: 32%;
+    margin-top: 12vw;
+    margin-right: 2vw;
+    margin-bottom: 0;
+    margin-left: auto;
+    border-bottom: 0.1vw solid #000000;
+    display: block;
+    text-align: right;
+    padding-bottom: 2vw;
+    font-size: 3vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+
+
+.image-text {
+    display: none;
+}
+
+.images-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2vw 3vw 0;
+}
+
+.images1 {}
+
+.images-wrap>div {
+    width: 23%;
+    position: relative;
+}
+
+.images-wrap .title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 23%;
+    z-index: 1;
+}
+
+.images-wrap .title p {
+    margin-right: 1vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.images-wrap .title * {
+    color: #ffffff;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.images-wrap>div:hover .image-text {
+    display: block;
+}
+
+.images-wrap .image-text {
+    position: absolute;
+    background: linear-gradient(-45deg, rgb(52, 73, 94) 0%, rgb(204, 96, 85) 100%);
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+
+}
+
+.specific-text {
+    color: #fff;
+    width: 50%;
+    margin: 10vw auto 0;
+    border: 0.2vw solid #fff;
+    padding: 1vw;
+    font-size: 2vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.Description {
+    font-size: 2vw;
+    width: 38%;
+    color: #999999;
+    line-height: 3vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: 6vw 0 0 auto;
+}
+
+.fiveth-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea#message {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.fiveth-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* margin-top: 69vh; */
+    margin: 8vw auto;
+}
+
+.left-wrap {
+    font-size: 2vw;
+    width: 38%;
+    color: #ffffff;
+    line-height: 3vw;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: 0 6vw auto;
+}
+
+.fiveth-wrap .contact {
+    width: 30%;
+    padding-left: 1vw;
+}
+
+.fiveth-wrap .form {
+    width: 30%;
+}
+
+.contact svg {
+    width: 1.7vw;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 1vw;
+    fill: #99ccff !important;
+
+}
+
+.contact>div>a>svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact p {
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle;
+    padding-left: 3vw;
+}
+
+.contact {
+    background: #ffffff80;
+}
+
+.fiveth-wrap .contact>div a p {
+    color: #313638;
+    text-decoration: none;
+}
+
+.fiveth-wrap .contact>div {
+    padding: 4vw 0;
+}
+
+.fiveth-wrap .form form>div input,
+.fiveth-wrap .form form>div textarea {
+    border: none;
+    border-bottom: 0.15vw solid #313638;
+    text-transform: uppercase;
+}
+
+
+
+.fiveth-wrap .form form>div input {
+    height: 5vw;
+    width: 100%;
+}
+
+.fiveth-wrap .form form>div input:focus-visible,
+.fiveth-wrap .form form>div textarea:focus-visible {
+    outline: none;
+}
+
+.fiveth-wrap .form form {
+    margin-left: 4vw;
+}
+
+.fiveth-wrap .form form label {
+    display: block;
+    color: #9a9a9a;
+    text-transform: uppercase;
+}
+
+.fiveth-wrap .form form>div textarea {
+    width: 100%;
+    height: 6vw;
+}
+
+.fiveth-wrap .form form>div {
+    margin: 1vw auto;
+}
+
+.fiveth-wrap .contact>div {
+    padding: 3vw 0;
+}
+
+.fiveth-wrap .form form>div input[type="submit"] {
+    width: 34%;
+    height: 3.5vw;
+    border: 0.15vw solid #000000;
+    cursor: pointer;
+}
+
+.fiveth-wrap .form form>div:nth-child(4) {
+    /* margin: 0 0 0 auto; */
+    text-align: right;
+}
+.detail1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.detail2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.detail3 {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+}
+
+.detail4 {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+}
+
+.right-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    margin-bottom: 4vw;
+}
+
+.seventh-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  </style>
+</head>
+<body>
+  <body>
+    <div class="side-wrap">
+      <div class="heading">
+        <h1>Sided</h1>
+      </div>
+      <div class="caption">
+        <p>new theme just for you</p>
+      </div>
+    </div>
+    <div class="first-wrap">
+      <p>
+        Nullam eget dignissim orci. Donec tincidunt blandit libero iaculis
+        fermentum. Aliquam erat volutpat. Interger suscipit aliquam augue ac
+        rutrum. Phasellus sit amet erat id sapien efficitur euismod.
+      </p>
+    </div>
+    <div class="second-wrap">
+      <div class="pic">
+        <img src="./assests/forty_image_01.jpg" alt="pic" />
+      </div>
+      <div class="para">
+        <div class="heading1">
+          <h2>Our Place</h2>
+        </div>
+        <p>
+          Sided Bootstrap v4.2.1 template has 3 HTML pages.
+          <a href="">Index</a> , <a href="">Page 2</a> and
+          <a href="">Page 3</a>. You may share this Sided template or
+          <a href="">our templatemo page</a> to your friends. Pellentesque
+          commodo malesuada est.
+        </p>
+        <p>
+          Suspendisse porttitor sollicitudin nisi et bibendum. Donec ac semper
+          ante, non sagittis sapien. Duis hendrerit tellus sit amet cursus
+          euismod.
+        </p>
+      </div>
+    </div>
+    <div class="third-wrap">
+      <div class="heading2">
+        <h2>Fusce a porttitor augue</h2>
+        <p>
+          Quisque rutrum dapibus odio vitae tincidunt. Etiam sollicitudin augue
+          non porta interdum. Pellentesque placerat orci at libero ornare, nec
+          viverra justo lobortis. Phasellus venenatis eros non.
+        </p>
+      </div>
+      <div class="pic2">
+        <img src="./assests/forty_image_02.jpg" alt="" />
+      </div>
+    </div>
+    <div class="fourth-wrap">
+      <div class="heading3">
+        <h2>Beautiful Rollovers</h2>
+      </div>
+      <div class="images-wrap">
+        <div class="images1">
+          <div class="title">
+            <p>MESSY</p>
+            <h4>DUKE</h4>
+          </div>
+          <img src="./assests/forty_image_11.jpg" alt="pic1" />
+          <div class="image-text">
+            <div class="specific-text">
+              When he looks at the sky, he feels to run.
+            </div>
+          </div>
+        </div>
+        <div class="images2">
+          <div class="title">
+            <p>MESSY</p>
+            <h4>DUKE</h4>
+          </div>
+          <img src="./assests/forty_image_12.jpg" alt="pic2" />
+          <div class="image-text">
+            <div class="specific-text">
+              When he looks at the sky, he feels to run.
+            </div>
+          </div>
+        </div>
+        <div class="images3">
+          <div class="title">
+            <p>MESSY</p>
+            <h4>DUKE</h4>
+          </div>
+          <img src="./assests/forty_image_13.jpg" alt="pic3" />
+          <div class="image-text">
+            <div class="specific-text">
+              When he looks at the sky, he feels to run.
+            </div>
+          </div>
+        </div>
+        <div class="images4">
+          <div class="title">
+            <p>MESSY</p>
+            <h4>DUKE</h4>
+          </div>
+          <img src="./assests/forty_image_14.jpg" alt="pic4" />
+          <div class="image-text">
+            <div class="specific-text">
+              When he looks at the sky, he feels to run.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Description">
+        Description text for beautiful rollovers using text color code #999 for
+        this line. Quisque pharetra mauris in libero vaius tristique.
+      </div>
+    </div>
+    <div class="fiveth-wrap">
+      <div class="contact">
+        <div class="phn">
+          <a href="tel:010-020-0340"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#99ccff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M21 5.5C21 14.0604 14.0604 21 5.5 21C5.11378 21 4.73086 20.9859 4.35172 20.9581C3.91662 20.9262 3.69906 20.9103 3.50103 20.7963C3.33701 20.7019 3.18146 20.5345 3.09925 20.364C3 20.1582 3 19.9181 3 19.438V16.6207C3 16.2169 3 16.015 3.06645 15.842C3.12515 15.6891 3.22049 15.553 3.3441 15.4456C3.48403 15.324 3.67376 15.255 4.05321 15.117L7.26005 13.9509C7.70153 13.7904 7.92227 13.7101 8.1317 13.7237C8.31637 13.7357 8.49408 13.7988 8.64506 13.9058C8.81628 14.0271 8.93713 14.2285 9.17882 14.6314L10 16C12.6499 14.7999 14.7981 12.6489 16 10L14.6314 9.17882C14.2285 8.93713 14.0271 8.81628 13.9058 8.64506C13.7988 8.49408 13.7357 8.31637 13.7237 8.1317C13.7101 7.92227 13.7904 7.70153 13.9509 7.26005L13.9509 7.26005L15.117 4.05321C15.255 3.67376 15.324 3.48403 15.4456 3.3441C15.553 3.22049 15.6891 3.12515 15.842 3.06645C16.015 3 16.2169 3 16.6207 3H19.438C19.9181 3 20.1582 3 20.364 3.09925C20.5345 3.18146 20.7019 3.33701 20.7963 3.50103C20.9103 3.69907 20.9262 3.91662 20.9581 4.35173C20.9859 4.73086 21 5.11378 21 5.5Z"
+                  stroke="99ccff;"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+            <p>010-020-0340</p>
+          </a>
+        </div>
+        <div class="msg">
+          <a href="mailto:info@company.com"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              #99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffS#99ccffV#99ccffG#99ccffR#99ccffe#99ccffp#99ccffo#99ccff_#99ccffb#99ccffg#99ccffC#99ccffa#99ccffr#99ccffr#99ccffi#99ccffe#99ccffr#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffw#99ccffi#99ccffd#99ccfft#99ccffh#99ccff=#99ccff"#99ccff0#99ccff"#99ccff&gt;#99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffS#99ccffV#99ccffG#99ccffR#99ccffe#99ccffp#99ccffo#99ccff_#99ccfft#99ccffr#99ccffa#99ccffc#99ccffe#99ccffr#99ccffC#99ccffa#99ccffr#99ccffr#99ccffi#99ccffe#99ccffr#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffc#99ccffa#99ccffp#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffj#99ccffo#99ccffi#99ccffn#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff&gt;#99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffS#99ccffV#99ccffG#99ccffR#99ccffe#99ccffp#99ccffo#99ccff_#99ccffi#99ccffc#99ccffo#99ccffn#99ccffC#99ccffa#99ccffr#99ccffr#99ccffi#99ccffe#99ccffr#99ccff"#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffp#99ccffa#99ccfft#99ccffh#99ccff
+              #99ccffd#99ccff=#99ccff"#99ccffM#99ccff4#99ccff
+              #99ccff7#99ccff.#99ccff0#99ccff0#99ccff0#99ccff0#99ccff5#99ccffL#99ccff1#99ccff0#99ccff.#99ccff2#99ccff
+              #99ccff1#99ccff1#99ccff.#99ccff6#99ccff5#99ccffC#99ccff1#99ccff1#99ccff.#99ccff2#99ccff6#99ccff6#99ccff7#99ccff
+              #99ccff1#99ccff2#99ccff.#99ccff4#99ccff5#99ccff
+              #99ccff1#99ccff2#99ccff.#99ccff7#99ccff3#99ccff3#99ccff3#99ccff
+              #99ccff1#99ccff2#99ccff.#99ccff4#99ccff5#99ccff
+              #99ccff1#99ccff3#99ccff.#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff.#99ccff6#99ccff5#99ccffL#99ccff2#99ccff0#99ccff
+              #99ccff7#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff=#99ccff"#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffw#99ccffi#99ccffd#99ccfft#99ccffh#99ccff=#99ccff"#99ccff2#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffc#99ccffa#99ccffp#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffj#99ccffo#99ccffi#99ccffn#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff&gt;#99ccff&lt;#99ccff/#99ccffp#99ccffa#99ccfft#99ccffh#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffr#99ccffe#99ccffc#99ccfft#99ccff
+              #99ccffx#99ccff=#99ccff"#99ccff3#99ccff"#99ccff
+              #99ccffy#99ccff=#99ccff"#99ccff5#99ccff"#99ccff
+              #99ccffw#99ccffi#99ccffd#99ccfft#99ccffh#99ccff=#99ccff"#99ccff1#99ccff8#99ccff"#99ccff
+              #99ccffh#99ccffe#99ccffi#99ccffg#99ccffh#99ccfft#99ccff=#99ccff"#99ccff1#99ccff4#99ccff"#99ccff
+              #99ccffr#99ccffx#99ccff=#99ccff"#99ccff2#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff=#99ccff"#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffw#99ccffi#99ccffd#99ccfft#99ccffh#99ccff=#99ccff"#99ccff2#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffc#99ccffa#99ccffp#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff&gt;#99ccff&lt;#99ccff/#99ccffr#99ccffe#99ccffc#99ccfft#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff</svg
+            >info@company.com</a
+          >
+        </div>
+        <div class="locate">
+          <a href=""
+            ><svg
+              viewBox="-4 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+              fill="#000000"
+            >
+              #99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffS#99ccffV#99ccffG#99ccffR#99ccffe#99ccffp#99ccffo#99ccff_#99ccffb#99ccffg#99ccffC#99ccffa#99ccffr#99ccffr#99ccffi#99ccffe#99ccffr#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffw#99ccffi#99ccffd#99ccfft#99ccffh#99ccff=#99ccff"#99ccff0#99ccff"#99ccff&gt;#99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffS#99ccffV#99ccffG#99ccffR#99ccffe#99ccffp#99ccffo#99ccff_#99ccfft#99ccffr#99ccffa#99ccffc#99ccffe#99ccffr#99ccffC#99ccffa#99ccffr#99ccffr#99ccffi#99ccffe#99ccffr#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffc#99ccffa#99ccffp#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffl#99ccffi#99ccffn#99ccffe#99ccffj#99ccffo#99ccffi#99ccffn#99ccff=#99ccff"#99ccffr#99ccffo#99ccffu#99ccffn#99ccffd#99ccff"#99ccff&gt;#99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffS#99ccffV#99ccffG#99ccffR#99ccffe#99ccffp#99ccffo#99ccff_#99ccffi#99ccffc#99ccffo#99ccffn#99ccffC#99ccffa#99ccffr#99ccffr#99ccffi#99ccffe#99ccffr#99ccff"#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccfft#99ccffi#99ccfft#99ccffl#99ccffe#99ccff&gt;#99ccffl#99ccffo#99ccffc#99ccffa#99ccfft#99ccffi#99ccffo#99ccffn#99ccff&lt;#99ccff/#99ccfft#99ccffi#99ccfft#99ccffl#99ccffe#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffd#99ccffe#99ccffs#99ccffc#99ccff&gt;#99ccffC#99ccffr#99ccffe#99ccffa#99ccfft#99ccffe#99ccffd#99ccff
+              #99ccffw#99ccffi#99ccfft#99ccffh#99ccff
+              #99ccffS#99ccffk#99ccffe#99ccfft#99ccffc#99ccffh#99ccff
+              #99ccffB#99ccffe#99ccfft#99ccffa#99ccff.#99ccff&lt;#99ccff/#99ccffd#99ccffe#99ccffs#99ccffc#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffd#99ccffe#99ccfff#99ccffs#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccff/#99ccffd#99ccffe#99ccfff#99ccffs#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffP#99ccffa#99ccffg#99ccffe#99ccff-#99ccff1#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff=#99ccff"#99ccffn#99ccffo#99ccffn#99ccffe#99ccff"#99ccff
+              #99ccffs#99ccfft#99ccffr#99ccffo#99ccffk#99ccffe#99ccff-#99ccffw#99ccffi#99ccffd#99ccfft#99ccffh#99ccff=#99ccff"#99ccff1#99ccff"#99ccff
+              #99ccfff#99ccffi#99ccffl#99ccffl#99ccff=#99ccff"#99ccffn#99ccffo#99ccffn#99ccffe#99ccff"#99ccff
+              #99ccfff#99ccffi#99ccffl#99ccffl#99ccff-#99ccffr#99ccffu#99ccffl#99ccffe#99ccff=#99ccff"#99ccffe#99ccffv#99ccffe#99ccffn#99ccffo#99ccffd#99ccffd#99ccff"#99ccff
+              #99ccffs#99ccffk#99ccffe#99ccfft#99ccffc#99ccffh#99ccff:#99ccfft#99ccffy#99ccffp#99ccffe#99ccff=#99ccff"#99ccffM#99ccffS#99ccffP#99ccffa#99ccffg#99ccffe#99ccff"#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffg#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffI#99ccffc#99ccffo#99ccffn#99ccff-#99ccffS#99ccffe#99ccfft#99ccff"#99ccff
+              #99ccffs#99ccffk#99ccffe#99ccfft#99ccffc#99ccffh#99ccff:#99ccfft#99ccffy#99ccffp#99ccffe#99ccff=#99ccff"#99ccffM#99ccffS#99ccffL#99ccffa#99ccffy#99ccffe#99ccffr#99ccffG#99ccffr#99ccffo#99ccffu#99ccffp#99ccff"#99ccff
+              #99ccfft#99ccffr#99ccffa#99ccffn#99ccffs#99ccfff#99ccffo#99ccffr#99ccffm#99ccff=#99ccff"#99ccfft#99ccffr#99ccffa#99ccffn#99ccffs#99ccffl#99ccffa#99ccfft#99ccffe#99ccff(#99ccff-#99ccff1#99ccff0#99ccff4#99ccff.#99ccff0#99ccff0#99ccff0#99ccff0#99ccff0#99ccff0#99ccff,#99ccff
+              #99ccff-#99ccff4#99ccff1#99ccff1#99ccff.#99ccff0#99ccff0#99ccff0#99ccff0#99ccff0#99ccff0#99ccff)#99ccff"#99ccff
+              #99ccfff#99ccffi#99ccffl#99ccffl#99ccff=#99ccff"#99ccff"#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccffp#99ccffa#99ccfft#99ccffh#99ccff
+              #99ccffd#99ccff=#99ccff"#99ccffM#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff2#99ccff6#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff4#99ccff.#99ccff3#99ccff4#99ccff3#99ccff,#99ccff4#99ccff2#99ccff6#99ccff
+              #99ccff1#99ccff1#99ccff3#99ccff,#99ccff4#99ccff2#99ccff4#99ccff.#99ccff6#99ccff5#99ccff7#99ccff
+              #99ccff1#99ccff1#99ccff3#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff3#99ccff,#99ccff4#99ccff2#99ccff1#99ccff.#99ccff3#99ccff4#99ccff3#99ccff
+              #99ccff1#99ccff1#99ccff4#99ccff.#99ccff3#99ccff4#99ccff3#99ccff,#99ccff4#99ccff2#99ccff0#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff2#99ccff0#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff7#99ccff.#99ccff6#99ccff5#99ccff7#99ccff,#99ccff4#99ccff2#99ccff0#99ccff
+              #99ccff1#99ccff1#99ccff9#99ccff,#99ccff4#99ccff2#99ccff1#99ccff.#99ccff3#99ccff4#99ccff3#99ccff
+              #99ccff1#99ccff1#99ccff9#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff9#99ccff,#99ccff4#99ccff2#99ccff4#99ccff.#99ccff6#99ccff5#99ccff7#99ccff
+              #99ccff1#99ccff1#99ccff7#99ccff.#99ccff6#99ccff5#99ccff7#99ccff,#99ccff4#99ccff2#99ccff6#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff2#99ccff6#99ccff
+              #99ccffL#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff2#99ccff6#99ccff
+              #99ccffZ#99ccff
+              #99ccffM#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff8#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff3#99ccff.#99ccff2#99ccff3#99ccff9#99ccff,#99ccff4#99ccff1#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff1#99ccff,#99ccff4#99ccff2#99ccff0#99ccff.#99ccff2#99ccff3#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff1#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff1#99ccff,#99ccff4#99ccff2#99ccff5#99ccff.#99ccff7#99ccff6#99ccff2#99ccff
+              #99ccff1#99ccff1#99ccff3#99ccff.#99ccff2#99ccff3#99ccff9#99ccff,#99ccff4#99ccff2#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff2#99ccff8#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff8#99ccff.#99ccff7#99ccff6#99ccff1#99ccff,#99ccff4#99ccff2#99ccff8#99ccff
+              #99ccff1#99ccff2#99ccff1#99ccff,#99ccff4#99ccff2#99ccff5#99ccff.#99ccff7#99ccff6#99ccff2#99ccff
+              #99ccff1#99ccff2#99ccff1#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff2#99ccff1#99ccff,#99ccff4#99ccff2#99ccff0#99ccff.#99ccff2#99ccff3#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff8#99ccff.#99ccff7#99ccff6#99ccff1#99ccff,#99ccff4#99ccff1#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff8#99ccff
+              #99ccffL#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff8#99ccff
+              #99ccffZ#99ccff
+              #99ccffM#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff4#99ccff0#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff4#99ccff.#99ccff3#99ccff3#99ccff7#99ccff,#99ccff4#99ccff4#99ccff0#99ccff.#99ccff0#99ccff0#99ccff9#99ccff
+              #99ccff1#99ccff0#99ccff6#99ccff,#99ccff4#99ccff2#99ccff7#99ccff.#99ccff1#99ccff8#99ccff1#99ccff
+              #99ccff1#99ccff0#99ccff6#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff0#99ccff6#99ccff,#99ccff4#99ccff1#99ccff7#99ccff.#99ccff4#99ccff7#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff0#99ccff.#99ccff4#99ccff7#99ccff7#99ccff,#99ccff4#99ccff1#99ccff3#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff2#99ccff1#99ccff.#99ccff5#99ccff2#99ccff3#99ccff,#99ccff4#99ccff1#99ccff3#99ccff
+              #99ccff1#99ccff2#99ccff6#99ccff,#99ccff4#99ccff1#99ccff7#99ccff.#99ccff4#99ccff7#99ccff8#99ccff
+              #99ccff1#99ccff2#99ccff6#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff2#99ccff6#99ccff,#99ccff4#99ccff2#99ccff7#99ccff.#99ccff1#99ccff2#99ccff5#99ccff
+              #99ccff1#99ccff1#99ccff7#99ccff.#99ccff6#99ccff3#99ccff7#99ccff,#99ccff4#99ccff4#99ccff0#99ccff.#99ccff0#99ccff0#99ccff9#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff4#99ccff0#99ccff
+              #99ccffL#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff4#99ccff0#99ccff
+              #99ccffZ#99ccff
+              #99ccffM#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff1#99ccff
+              #99ccffC#99ccff1#99ccff0#99ccff9#99ccff.#99ccff3#99ccff7#99ccff3#99ccff,#99ccff4#99ccff1#99ccff1#99ccff
+              #99ccff1#99ccff0#99ccff4#99ccff,#99ccff4#99ccff1#99ccff6#99ccff.#99ccff3#99ccff7#99ccff3#99ccff
+              #99ccff1#99ccff0#99ccff4#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff0#99ccff4#99ccff,#99ccff4#99ccff2#99ccff8#99ccff.#99ccff0#99ccff1#99ccff8#99ccff
+              #99ccff1#99ccff1#99ccff4#99ccff.#99ccff0#99ccff0#99ccff5#99ccff,#99ccff4#99ccff4#99ccff3#99ccff.#99ccff0#99ccff1#99ccff1#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff4#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff1#99ccff7#99ccff.#99ccff9#99ccff6#99ccff4#99ccff,#99ccff4#99ccff4#99ccff3#99ccff.#99ccff0#99ccff1#99ccff1#99ccff
+              #99ccff1#99ccff2#99ccff8#99ccff,#99ccff4#99ccff2#99ccff7#99ccff.#99ccff9#99ccff5#99ccff
+              #99ccff1#99ccff2#99ccff8#99ccff,#99ccff4#99ccff2#99ccff3#99ccff
+              #99ccffC#99ccff1#99ccff2#99ccff8#99ccff,#99ccff4#99ccff1#99ccff6#99ccff.#99ccff3#99ccff7#99ccff3#99ccff
+              #99ccff1#99ccff2#99ccff2#99ccff.#99ccff6#99ccff2#99ccff7#99ccff,#99ccff4#99ccff1#99ccff1#99ccff
+              #99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff1#99ccff
+              #99ccffL#99ccff1#99ccff1#99ccff6#99ccff,#99ccff4#99ccff1#99ccff1#99ccff
+              #99ccffZ#99ccff"#99ccff
+              #99ccffi#99ccffd#99ccff=#99ccff"#99ccffl#99ccffo#99ccffc#99ccffa#99ccfft#99ccffi#99ccffo#99ccffn#99ccff"#99ccff
+              #99ccffs#99ccffk#99ccffe#99ccfft#99ccffc#99ccffh#99ccff:#99ccfft#99ccffy#99ccffp#99ccffe#99ccff=#99ccff"#99ccffM#99ccffS#99ccffS#99ccffh#99ccffa#99ccffp#99ccffe#99ccffG#99ccffr#99ccffo#99ccffu#99ccffp#99ccff"#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccff/#99ccffp#99ccffa#99ccfft#99ccffh#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff
+              #99ccff&lt;#99ccff/#99ccffg#99ccff&gt;#99ccff</svg
+            >6120 Suspendisse ultricies Scelerisque tellus, ID 10260 Magna
+            aliquet porttitor</a
+          >
+        </div>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="details1"><input type="text" placeholder="name" /></div>
+          <div class="details2"><input type="email" placeholder="email" /></div>
+          <div class="details3">
+            <label for="message"></label>
+            <textarea name="message" id="message" placeholder="message"></textarea>
+          </div>
+          <div>
+            <input type="submit" value="SEND" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="sixth-wrap">
+      <div class="left-wrap">
+        <p>
+          Fusce a porttitor augue. Phasellus nec faucibus erat, vitae sagittis
+          arcu. Quisque viverra dui purus, at rutrum nibh suscipit ut.
+        </p>
+        <p>
+          “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus
+          ac mauris maximus auctor.”
+        </p>
+      </div>
+      <div class="right-wrap">
+        <div class="detail1">
+          <a href=""
+            ><svg
+              fill="#000000"
+              height="50px"
+              width="50px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-143 145 512 512"
+              xml:space="preserve"
+            >
+              #ffffff&lt;#ffffffg#ffffff
+              #ffffffi#ffffffd#ffffff="#ffffff"#ffffffS#ffffffV#ffffffG#ffffffR#ffffffe#ffffffp#ffffffo#ffffff_#ffffffb#ffffffg#ffffffC#ffffffa#ffffffr#ffffffr#ffffffi#ffffffe#ffffffr#ffffff"#ffffff"
+              #ffffffs#fffffft#ffffffr#ffffffo#ffffffk#ffffffe#ffffff-#ffffffw#ffffffi#ffffffd#fffffft#ffffffh#ffffff="#ffffff"#ffffff0#ffffff"#ffffff"&gt;#ffffff&lt;#ffffff
+              #ffffffg#ffffff=""&gt;#ffffff&lt;#ffffffg#ffffff
+              #ffffffi#ffffffd#ffffff="#ffffff"#ffffffS#ffffffV#ffffffG#ffffffR#ffffffe#ffffffp#ffffffo#ffffff_#fffffft#ffffffr#ffffffa#ffffffc#ffffffe#ffffffr#ffffffC#ffffffa#ffffffr#ffffffr#ffffffi#ffffffe#ffffffr#ffffff"#ffffff"
+              #ffffffs#fffffft#ffffffr#ffffffo#ffffffk#ffffffe#ffffff-#ffffffl#ffffffi#ffffffn#ffffffe#ffffffc#ffffffa#ffffffp#ffffff="#ffffff"#ffffffr#ffffffo#ffffffu#ffffffn#ffffffd#ffffff"#ffffff"
+              #ffffffs#fffffft#ffffffr#ffffffo#ffffffk#ffffffe#ffffff-#ffffffl#ffffffi#ffffffn#ffffffe#ffffffj#ffffffo#ffffffi#ffffffn#ffffff="#ffffff"#ffffffr#ffffffo#ffffffu#ffffffn#ffffffd#ffffff"#ffffff"&gt;#ffffff&lt;#ffffff
+              #ffffffg#ffffff=""&gt;#ffffff&lt;#ffffffg#ffffff
+              #ffffffi#ffffffd#ffffff="#ffffff"#ffffffS#ffffffV#ffffffG#ffffffR#ffffffe#ffffffp#ffffffo#ffffff_#ffffffi#ffffffc#ffffffo#ffffffn#ffffffC#ffffffa#ffffffr#ffffffr#ffffffi#ffffffe#ffffffr#ffffff"#ffffff"&gt;#ffffff
+              #ffffff&lt;#ffffffp#ffffffa#fffffft#ffffffh#ffffff
+              #ffffffd#ffffff="#ffffff"#ffffffM#ffffff1#ffffff1#ffffff3#ffffff,#ffffff1#ffffff4#ffffff5#ffffffc#ffffff-#ffffff1#ffffff4#ffffff1#ffffff.#ffffff4#ffffff,#ffffff0#ffffff-#ffffff2#ffffff5#ffffff6#ffffff,#ffffff1#ffffff1#ffffff4#ffffff.#ffffff6#ffffff-#ffffff2#ffffff5#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffffs#ffffff1#ffffff1#ffffff4#ffffff.#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffffs#ffffff2#ffffff5#ffffff6#ffffff-#ffffff1#ffffff1#ffffff4#ffffff.#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffff-#ffffff2#ffffff5#ffffff6#ffffffS#ffffff2#ffffff5#ffffff4#ffffff.#ffffff4#ffffff,#ffffff1#ffffff4#ffffff5#ffffff,#ffffff1#ffffff1#ffffff3#ffffff,#ffffff1#ffffff4#ffffff5#ffffffz#ffffff"
+              #ffffffm#ffffff2#ffffff1#ffffff5#ffffff.#ffffff2#ffffff,#ffffff3#ffffff6#ffffff1#ffffff.#ffffff2#ffffff=""
+              #ffffffc#ffffff0#ffffff.#ffffff1#ffffff,#ffffff2#ffffff.#ffffff2#ffffff,#ffffff0#ffffff.#ffffff1#ffffff,#ffffff4#ffffff.#ffffff5#ffffff,#ffffff0#ffffff.#ffffff1#ffffff,#ffffff6#ffffff.#ffffff8#ffffffc#ffffff0#ffffff,#ffffff6#ffffff9#ffffff.#ffffff5#ffffff-#ffffff5#ffffff2#ffffff.#ffffff9#ffffff,#ffffff1#ffffff4#ffffff9#ffffff.#ffffff7#ffffff-#ffffff1#ffffff4#ffffff9#ffffff.#ffffff7#ffffff,#ffffff1#ffffff4#ffffff9#ffffff.#ffffff7#ffffffc#ffffff-#ffffff2#ffffff9#ffffff.#ffffff7#ffffff,#ffffff0#ffffff-#ffffff5#ffffff7#ffffff.#ffffff4#ffffff-#ffffff8#ffffff.#ffffff7#ffffff-#ffffff8#ffffff0#ffffff.#ffffff6#ffffff-#ffffff2#ffffff3#ffffff.#ffffff6#ffffffc#ffffff4#ffffff.#ffffff1#ffffff,#ffffff0#ffffff.#ffffff5#ffffff,#ffffff8#ffffff.#ffffff3#ffffff,#ffffff0#ffffff.#ffffff7#ffffff,#ffffff1#ffffff2#ffffff.#ffffff6#ffffff,#ffffff0#ffffff.#ffffff7#ffffff=""
+              #ffffffc#ffffff2#ffffff4#ffffff.#ffffff6#ffffff,#ffffff0#ffffff,#ffffff4#ffffff7#ffffff.#ffffff3#ffffff-#ffffff8#ffffff.#ffffff4#ffffff,#ffffff6#ffffff5#ffffff.#ffffff3#ffffff-#ffffff2#ffffff2#ffffff.#ffffff5#ffffffc#ffffff-#ffffff2#ffffff3#ffffff-#ffffff0#ffffff.#ffffff4#ffffff-#ffffff4#ffffff2#ffffff.#ffffff5#ffffff-#ffffff1#ffffff5#ffffff.#ffffff6#ffffff-#ffffff4#ffffff9#ffffff.#ffffff1#ffffff-#ffffff3#ffffff6#ffffff.#ffffff5#ffffffc#ffffff3#ffffff.#ffffff2#ffffff,#ffffff0#ffffff.#ffffff6#ffffff,#ffffff6#ffffff.#ffffff5#ffffff,#ffffff0#ffffff.#ffffff9#ffffff,#ffffff9#ffffff.#ffffff9#ffffff,#ffffff0#ffffff.#ffffff9#ffffffc#ffffff4#ffffff.#ffffff8#ffffff,#ffffff0#ffffff,#ffffff9#ffffff.#ffffff5#ffffff-#ffffff0#ffffff.#ffffff6#ffffff,#ffffff1#ffffff3#ffffff.#ffffff9#ffffff-#ffffff1#ffffff.#ffffff9#ffffff=""
+              #ffffffc#ffffff1#ffffff3#ffffff.#ffffff5#ffffff,#ffffff4#ffffff3#ffffff0#ffffff-#ffffff4#ffffff.#ffffff6#ffffff,#ffffff4#ffffff0#ffffff8#ffffff.#ffffff7#ffffff-#ffffff4#ffffff.#ffffff6#ffffff,#ffffff3#ffffff8#ffffff3#ffffff.#ffffff2#ffffffv#ffffff-#ffffff0#ffffff.#ffffff6#ffffffc#ffffff7#ffffff.#ffffff1#ffffff,#ffffff3#ffffff.#ffffff9#ffffff,#ffffff1#ffffff5#ffffff.#ffffff2#ffffff,#ffffff6#ffffff.#ffffff3#ffffff,#ffffff2#ffffff3#ffffff.#ffffff8#ffffff,#ffffff6#ffffff.#ffffff6#ffffffc#ffffff-#ffffff1#ffffff4#ffffff.#ffffff1#ffffff-#ffffff9#ffffff.#ffffff4#ffffff-#ffffff2#ffffff3#ffffff.#ffffff4#ffffff-#ffffff2#ffffff5#ffffff.#ffffff6#ffffff-#ffffff2#ffffff3#ffffff.#ffffff4#ffffff-#ffffff4#ffffff3#ffffff.#ffffff8#ffffffc#ffffff0#ffffff-#ffffff9#ffffff.#ffffff6#ffffff,#ffffff2#ffffff.#ffffff6#ffffff-#ffffff1#ffffff8#ffffff.#ffffff7#ffffff,#ffffff7#ffffff.#ffffff1#ffffff-#ffffff2#ffffff6#ffffff.#ffffff5#ffffff=""
+              #ffffffc#ffffff2#ffffff6#ffffff,#ffffff3#ffffff1#ffffff.#ffffff9#ffffff,#ffffff6#ffffff4#ffffff.#ffffff7#ffffff,#ffffff5#ffffff2#ffffff.#ffffff8#ffffff,#ffffff1#ffffff0#ffffff8#ffffff.#ffffff4#ffffff,#ffffff5#ffffff5#ffffffc#ffffff-#ffffff0#ffffff.#ffffff9#ffffff-#ffffff3#ffffff.#ffffff8#ffffff-#ffffff1#ffffff.#ffffff4#ffffff-#ffffff7#ffffff.#ffffff8#ffffff-#ffffff1#ffffff.#ffffff4#ffffff-#ffffff1#ffffff2#ffffffc#ffffff0#ffffff-#ffffff2#ffffff9#ffffff,#ffffff2#ffffff3#ffffff.#ffffff6#ffffff-#ffffff5#ffffff2#ffffff.#ffffff6#ffffff,#ffffff5#ffffff2#ffffff.#ffffff6#ffffff-#ffffff5#ffffff2#ffffff.#ffffff6#ffffffc#ffffff1#ffffff5#ffffff.#ffffff1#ffffff,#ffffff0#ffffff,#ffffff2#ffffff8#ffffff.#ffffff8#ffffff,#ffffff6#ffffff.#ffffff4#ffffff,#ffffff3#ffffff8#ffffff.#ffffff4#ffffff,#ffffff1#ffffff6#ffffff.#ffffff6#ffffff=""
+              #ffffffc#ffffff1#ffffff2#ffffff-#ffffff2#ffffff.#ffffff4#ffffff,#ffffff2#ffffff3#ffffff.#ffffff2#ffffff-#ffffff6#ffffff.#ffffff7#ffffff,#ffffff3#ffffff3#ffffff.#ffffff4#ffffff-#ffffff1#ffffff2#ffffff.#ffffff8#ffffffc#ffffff-#ffffff3#ffffff.#ffffff9#ffffff,#ffffff1#ffffff2#ffffff.#ffffff3#ffffff-#ffffff1#ffffff2#ffffff.#ffffff3#ffffff,#ffffff2#ffffff2#ffffff.#ffffff6#ffffff-#ffffff2#ffffff3#ffffff.#ffffff1#ffffff,#ffffff2#ffffff9#ffffff.#ffffff1#ffffffc#ffffff1#ffffff0#ffffff.#ffffff6#ffffff-#ffffff1#ffffff.#ffffff3#ffffff,#ffffff2#ffffff0#ffffff.#ffffff8#ffffff-#ffffff4#ffffff.#ffffff1#ffffff,#ffffff3#ffffff0#ffffff.#ffffff2#ffffff-#ffffff8#ffffff.#ffffff3#ffffffc#ffffff2#ffffff3#ffffff4#ffffff.#ffffff4#ffffff,#ffffff3#ffffff4#ffffff4#ffffff.#ffffff5#ffffff,#ffffff2#ffffff2#ffffff5#ffffff.#ffffff5#ffffff,#ffffff3#ffffff5#ffffff3#ffffff.#ffffff7#ffffff,#ffffff2#ffffff1#ffffff5#ffffff.#ffffff2#ffffff,#ffffff3#ffffff6#ffffff1#ffffff.#ffffff2#ffffffz#ffffff"#ffffff=""&gt;#ffffff&lt;#ffffff
+              #ffffffp#ffffffa#fffffft#ffffffh#ffffff=""&gt;#ffffff
+              #ffffff&lt;#ffffff #ffffffg#ffffff=""&gt;#ffffff<!--#ffffff--><!--#ffffff--><!--#ffffffp#ffffffa#fffffft#ffffffh#ffffff--><!--#ffffffg#ffffff--><!--#ffffff--><!--#ffffffg#ffffff--><!--#ffffff--><!--#ffffffg#ffffff-->
+            </svg></a
+          >
+        </div>
+        <div class="detail2">
+          <a href=""
+            ><svg
+              fill="#000000"
+              height="50px"
+              width="50px"
+              version="1.1"
+              id="Layer_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-143 145 512 512"
+              xml:space="preserve"
+            >
+              #ffffff&lt;#ffffffg#ffffff
+              #ffffffi#ffffffd#ffffff="#ffffff"#ffffffS#ffffffV#ffffffG#ffffffR#ffffffe#ffffffp#ffffffo#ffffff_#ffffffb#ffffffg#ffffffC#ffffffa#ffffffr#ffffffr#ffffffi#ffffffe#ffffffr#ffffff"#ffffff"
+              #ffffffs#fffffft#ffffffr#ffffffo#ffffffk#ffffffe#ffffff-#ffffffw#ffffffi#ffffffd#fffffft#ffffffh#ffffff="#ffffff"#ffffff0#ffffff"#ffffff"&gt;#ffffff&lt;#ffffff
+              #ffffffg#ffffff=""&gt;#ffffff&lt;#ffffffg#ffffff
+              #ffffffi#ffffffd#ffffff="#ffffff"#ffffffS#ffffffV#ffffffG#ffffffR#ffffffe#ffffffp#ffffffo#ffffff_#fffffft#ffffffr#ffffffa#ffffffc#ffffffe#ffffffr#ffffffC#ffffffa#ffffffr#ffffffr#ffffffi#ffffffe#ffffffr#ffffff"#ffffff"
+              #ffffffs#fffffft#ffffffr#ffffffo#ffffffk#ffffffe#ffffff-#ffffffl#ffffffi#ffffffn#ffffffe#ffffffc#ffffffa#ffffffp#ffffff="#ffffff"#ffffffr#ffffffo#ffffffu#ffffffn#ffffffd#ffffff"#ffffff"
+              #ffffffs#fffffft#ffffffr#ffffffo#ffffffk#ffffffe#ffffff-#ffffffl#ffffffi#ffffffn#ffffffe#ffffffj#ffffffo#ffffffi#ffffffn#ffffff="#ffffff"#ffffffr#ffffffo#ffffffu#ffffffn#ffffffd#ffffff"#ffffff"&gt;#ffffff&lt;#ffffff
+              #ffffffg#ffffff=""&gt;#ffffff&lt;#ffffffg#ffffff
+              #ffffffi#ffffffd#ffffff="#ffffff"#ffffffS#ffffffV#ffffffG#ffffffR#ffffffe#ffffffp#ffffffo#ffffff_#ffffffi#ffffffc#ffffffo#ffffffn#ffffffC#ffffffa#ffffffr#ffffffr#ffffffi#ffffffe#ffffffr#ffffff"#ffffff"&gt;#ffffff
+              #ffffff&lt;#ffffffp#ffffffa#fffffft#ffffffh#ffffff
+              #ffffffd#ffffff="#ffffff"#ffffffM#ffffff1#ffffff1#ffffff3#ffffff,#ffffff1#ffffff4#ffffff5#ffffffc#ffffff-#ffffff1#ffffff4#ffffff1#ffffff.#ffffff4#ffffff,#ffffff0#ffffff-#ffffff2#ffffff5#ffffff6#ffffff,#ffffff1#ffffff1#ffffff4#ffffff.#ffffff6#ffffff-#ffffff2#ffffff5#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffffs#ffffff1#ffffff1#ffffff4#ffffff.#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffffs#ffffff2#ffffff5#ffffff6#ffffff-#ffffff1#ffffff1#ffffff4#ffffff.#ffffff6#ffffff,#ffffff2#ffffff5#ffffff6#ffffff-#ffffff2#ffffff5#ffffff6#ffffffS#ffffff2#ffffff5#ffffff4#ffffff.#ffffff4#ffffff,#ffffff1#ffffff4#ffffff5#ffffff,#ffffff1#ffffff1#ffffff3#ffffff,#ffffff1#ffffff4#ffffff5#ffffffz#ffffff"
+              #ffffffm#ffffff2#ffffff1#ffffff5#ffffff.#ffffff2#ffffff,#ffffff3#ffffff6#ffffff1#ffffff.#ffffff2#ffffff=""
+              #ffffffc#ffffff0#ffffff.#ffffff1#ffffff,#ffffff2#ffffff.#ffffff2#ffffff,#ffffff0#ffffff.#ffffff1#ffffff,#ffffff4#ffffff.#ffffff5#ffffff,#ffffff0#ffffff.#ffffff1#ffffff,#ffffff6#ffffff.#ffffff8#ffffffc#ffffff0#ffffff,#ffffff6#ffffff9#ffffff.#ffffff5#ffffff-#ffffff5#ffffff2#ffffff.#ffffff9#ffffff,#ffffff1#ffffff4#ffffff9#ffffff.#ffffff7#ffffff-#ffffff1#ffffff4#ffffff9#ffffff.#ffffff7#ffffff,#ffffff1#ffffff4#ffffff9#ffffff.#ffffff7#ffffffc#ffffff-#ffffff2#ffffff9#ffffff.#ffffff7#ffffff,#ffffff0#ffffff-#ffffff5#ffffff7#ffffff.#ffffff4#ffffff-#ffffff8#ffffff.#ffffff7#ffffff-#ffffff8#ffffff0#ffffff.#ffffff6#ffffff-#ffffff2#ffffff3#ffffff.#ffffff6#ffffffc#ffffff4#ffffff.#ffffff1#ffffff,#ffffff0#ffffff.#ffffff5#ffffff,#ffffff8#ffffff.#ffffff3#ffffff,#ffffff0#ffffff.#ffffff7#ffffff,#ffffff1#ffffff2#ffffff.#ffffff6#ffffff,#ffffff0#ffffff.#ffffff7#ffffff=""
+              #ffffffc#ffffff2#ffffff4#ffffff.#ffffff6#ffffff,#ffffff0#ffffff,#ffffff4#ffffff7#ffffff.#ffffff3#ffffff-#ffffff8#ffffff.#ffffff4#ffffff,#ffffff6#ffffff5#ffffff.#ffffff3#ffffff-#ffffff2#ffffff2#ffffff.#ffffff5#ffffffc#ffffff-#ffffff2#ffffff3#ffffff-#ffffff0#ffffff.#ffffff4#ffffff-#ffffff4#ffffff2#ffffff.#ffffff5#ffffff-#ffffff1#ffffff5#ffffff.#ffffff6#ffffff-#ffffff4#ffffff9#ffffff.#ffffff1#ffffff-#ffffff3#ffffff6#ffffff.#ffffff5#ffffffc#ffffff3#ffffff.#ffffff2#ffffff,#ffffff0#ffffff.#ffffff6#ffffff,#ffffff6#ffffff.#ffffff5#ffffff,#ffffff0#ffffff.#ffffff9#ffffff,#ffffff9#ffffff.#ffffff9#ffffff,#ffffff0#ffffff.#ffffff9#ffffffc#ffffff4#ffffff.#ffffff8#ffffff,#ffffff0#ffffff,#ffffff9#ffffff.#ffffff5#ffffff-#ffffff0#ffffff.#ffffff6#ffffff,#ffffff1#ffffff3#ffffff.#ffffff9#ffffff-#ffffff1#ffffff.#ffffff9#ffffff=""
+              #ffffffc#ffffff1#ffffff3#ffffff.#ffffff5#ffffff,#ffffff4#ffffff3#ffffff0#ffffff-#ffffff4#ffffff.#ffffff6#ffffff,#ffffff4#ffffff0#ffffff8#ffffff.#ffffff7#ffffff-#ffffff4#ffffff.#ffffff6#ffffff,#ffffff3#ffffff8#ffffff3#ffffff.#ffffff2#ffffffv#ffffff-#ffffff0#ffffff.#ffffff6#ffffffc#ffffff7#ffffff.#ffffff1#ffffff,#ffffff3#ffffff.#ffffff9#ffffff,#ffffff1#ffffff5#ffffff.#ffffff2#ffffff,#ffffff6#ffffff.#ffffff3#ffffff,#ffffff2#ffffff3#ffffff.#ffffff8#ffffff,#ffffff6#ffffff.#ffffff6#ffffffc#ffffff-#ffffff1#ffffff4#ffffff.#ffffff1#ffffff-#ffffff9#ffffff.#ffffff4#ffffff-#ffffff2#ffffff3#ffffff.#ffffff4#ffffff-#ffffff2#ffffff5#ffffff.#ffffff6#ffffff-#ffffff2#ffffff3#ffffff.#ffffff4#ffffff-#ffffff4#ffffff3#ffffff.#ffffff8#ffffffc#ffffff0#ffffff-#ffffff9#ffffff.#ffffff6#ffffff,#ffffff2#ffffff.#ffffff6#ffffff-#ffffff1#ffffff8#ffffff.#ffffff7#ffffff,#ffffff7#ffffff.#ffffff1#ffffff-#ffffff2#ffffff6#ffffff.#ffffff5#ffffff=""
+              #ffffffc#ffffff2#ffffff6#ffffff,#ffffff3#ffffff1#ffffff.#ffffff9#ffffff,#ffffff6#ffffff4#ffffff.#ffffff7#ffffff,#ffffff5#ffffff2#ffffff.#ffffff8#ffffff,#ffffff1#ffffff0#ffffff8#ffffff.#ffffff4#ffffff,#ffffff5#ffffff5#ffffffc#ffffff-#ffffff0#ffffff.#ffffff9#ffffff-#ffffff3#ffffff.#ffffff8#ffffff-#ffffff1#ffffff.#ffffff4#ffffff-#ffffff7#ffffff.#ffffff8#ffffff-#ffffff1#ffffff.#ffffff4#ffffff-#ffffff1#ffffff2#ffffffc#ffffff0#ffffff-#ffffff2#ffffff9#ffffff,#ffffff2#ffffff3#ffffff.#ffffff6#ffffff-#ffffff5#ffffff2#ffffff.#ffffff6#ffffff,#ffffff5#ffffff2#ffffff.#ffffff6#ffffff-#ffffff5#ffffff2#ffffff.#ffffff6#ffffffc#ffffff1#ffffff5#ffffff.#ffffff1#ffffff,#ffffff0#ffffff,#ffffff2#ffffff8#ffffff.#ffffff8#ffffff,#ffffff6#ffffff.#ffffff4#ffffff,#ffffff3#ffffff8#ffffff.#ffffff4#ffffff,#ffffff1#ffffff6#ffffff.#ffffff6#ffffff=""
+              #ffffffc#ffffff1#ffffff2#ffffff-#ffffff2#ffffff.#ffffff4#ffffff,#ffffff2#ffffff3#ffffff.#ffffff2#ffffff-#ffffff6#ffffff.#ffffff7#ffffff,#ffffff3#ffffff3#ffffff.#ffffff4#ffffff-#ffffff1#ffffff2#ffffff.#ffffff8#ffffffc#ffffff-#ffffff3#ffffff.#ffffff9#ffffff,#ffffff1#ffffff2#ffffff.#ffffff3#ffffff-#ffffff1#ffffff2#ffffff.#ffffff3#ffffff,#ffffff2#ffffff2#ffffff.#ffffff6#ffffff-#ffffff2#ffffff3#ffffff.#ffffff1#ffffff,#ffffff2#ffffff9#ffffff.#ffffff1#ffffffc#ffffff1#ffffff0#ffffff.#ffffff6#ffffff-#ffffff1#ffffff.#ffffff3#ffffff,#ffffff2#ffffff0#ffffff.#ffffff8#ffffff-#ffffff4#ffffff.#ffffff1#ffffff,#ffffff3#ffffff0#ffffff.#ffffff2#ffffff-#ffffff8#ffffff.#ffffff3#ffffffc#ffffff2#ffffff3#ffffff4#ffffff.#ffffff4#ffffff,#ffffff3#ffffff4#ffffff4#ffffff.#ffffff5#ffffff,#ffffff2#ffffff2#ffffff5#ffffff.#ffffff5#ffffff,#ffffff3#ffffff5#ffffff3#ffffff.#ffffff7#ffffff,#ffffff2#ffffff1#ffffff5#ffffff.#ffffff2#ffffff,#ffffff3#ffffff6#ffffff1#ffffff.#ffffff2#ffffffz#ffffff"#ffffff=""&gt;#ffffff&lt;#ffffff
+              #ffffffp#ffffffa#fffffft#ffffffh#ffffff=""&gt;#ffffff
+              #ffffff&lt;#ffffff #ffffffg#ffffff=""&gt;#ffffff<!--#ffffff--><!--#ffffff--><!--#ffffffp#ffffffa#fffffft#ffffffh#ffffff--><!--#ffffffg#ffffff--><!--#ffffff--><!--#ffffffg#ffffff--><!--#ffffff--><!--#ffffffg#ffffff-->
+            </svg></a
+          >
+        </div>
+        <div class="detail3">
+          <a href=""
+            ><svg width="64px" height="64px" viewBox="-3.12 -3.12 30.24 30.24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z" stroke="#33363F" stroke-width="2"></path> <circle cx="16.5" cy="7.5" r="1.5" fill="#33363F"></circle> <circle cx="12" cy="12" r="3" stroke="#33363F" stroke-width="2"></circle> </g></svg></a>
+        </div>
+        <div class="detail4">
+          <a href=""
+            ><svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-17.28 -17.28 58.56 58.56" xml:space="preserve" width="64px" height="64px"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;} </style> <path d="M7.8,17.9c-3.2,0-5.9-2.6-5.9-5.9s2.6-5.9,5.9-5.9c1.5,0,2.9,0.6,4,1.5l-1.7,1.7C9.4,8.8,8.6,8.5,7.8,8.5 c-2,0-3.5,1.6-3.5,3.5s1.6,3.5,3.5,3.5c1.6,0,2.8-1,3.2-2.3H7.8V11h5.5C13.8,13.3,12.7,17.9,7.8,17.9z M19.9,13v2.1h-2.1V13h-2.1v-2 h2.1V8.9h2.1V11H22v2H19.9z"></path> <rect class="st0" width="24" height="24"></rect> </g></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="seventh-wrap">
+      <p>Copyright © 2019 Company Name - Design:</p>
+      <a href="https://github.com/rishi0n1">TemplateMo</a>
+    </div>
+  </body>
+</html>
+
+</body>
+</html>
